@@ -10,7 +10,6 @@ import styles from '../styles/Sidebar.module.css';
 
 const Sidebar = () => {
   const router = useRouter();
-
   return (
     <aside className={styles.sidebar}>
       <div className={styles.sidebarTop}>

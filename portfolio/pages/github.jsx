@@ -5,7 +5,7 @@ import styles from '../styles/GithubPage.module.css';
 
 const GithubPage = ({ repos, user }) => {
   const contributionsTheme = {
-    text: '#eee',
+    text: 'var(--text-color)',
   };
 
   return (

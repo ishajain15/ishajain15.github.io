@@ -1,33 +1,33 @@
-/* GitHub Dark */
+/* Atom-One Light */
 :root {
-  --main-bg: #24292e;
-  --bg-text: rgba(56, 58, 61, 0.35);
-  --text-color: #efefef;
-  --accent-color: #f9826c;
-  --element-color: #f9826c;
-  --titlebar-bg: #1f2428;
-  --titlebar-text: #fff;
-  --sidebar-bg: #24292e;
-  --sidebar-hover-bg: #1f2428;
-  --icon-bg: rgb(106, 115, 125);
-  --icon-hover-bg: rgb(106, 115, 125);
-  --icon-clicked-bg: rgb(225, 228, 232);
-  --explorer-bg: #1f2428;
-  --explorer-hover-bg: #24292e;
-  --explorer-border: #161a1d;
-  --tabs-bg: #1f2428;
-  --tab-bg: #1f2428;
-  --tab-active-bg: #24292e;
-  --tab-border: #24292e;
-  --bottombar-bg: #24292e;
-  --bottombar-border: #1b1f23;
-  --button-bg: #176f2c;
-  --button-text: #dcffe4;
-  --bottombar-hover-bg: #4f4f52;
-  --scrollbar-track-bg: #24292e;
-  --scrollbar-thumb-bg: #333536;
-  --article-bg: #1f2428;
-  --border-color: #1e1f29;
+  --main-bg: #fafafa;
+  --bg-text: #f0f0f0;
+  --text-color: #383a42;
+  --accent-color: #121417;
+  --element-color: #a86a04;
+  --titlebar-bg: #eaeaeb;
+  --titlebar-text: #5b5b5c;
+  --sidebar-bg: #fafafa;
+  --sidebar-hover-bg: #fafafa;
+  --icon-bg: #9fa0a1;
+  --icon-hover-bg: #383a42;
+  --icon-clicked-bg: #383a42;
+  --explorer-bg: #eaeaeb;
+  --explorer-hover-bg: #dbdbdc;
+  --explorer-border: #eaeaeb;
+  --tabs-bg: #eaeaeb;
+  --tab-bg: #eaeaeb;
+  --tab-active-bg: #fafafa;
+  --tab-border: transparent;
+  --bottombar-bg: #eaeaeb;
+  --bottombar-border: transparent;
+  --button-bg: #434c5e;
+  --button-text: #d8dee9;
+  --bottombar-hover-bg: #dbdbdc;
+  --scrollbar-track-bg: #fafafa;
+  --scrollbar-thumb-bg: #a4a8b0;
+  --article-bg: #ffffff;
+  --border-color: #e0e0e0;
 }
 
 /* Dracula */
@@ -158,34 +158,34 @@
   --border-color: #1e1f29;
 }
 
-/* Atom-One Light */
-[data-theme='atom-one-light'] {
-  --main-bg: #fafafa;
-  --bg-text: #f0f0f0;
-  --text-color: #383a42;
-  --accent-color: #121417;
-  --element-color: #a86a04;
-  --titlebar-bg: #eaeaeb;
-  --titlebar-text: #5b5b5c;
-  --sidebar-bg: #fafafa;
-  --sidebar-hover-bg: #fafafa;
-  --icon-bg: #9fa0a1;
-  --icon-hover-bg: #383a42;
-  --icon-clicked-bg: #383a42;
-  --explorer-bg: #eaeaeb;
-  --explorer-hover-bg: #dbdbdc;
-  --explorer-border: #eaeaeb;
-  --tabs-bg: #eaeaeb;
-  --tab-bg: #eaeaeb;
-  --tab-active-bg: #fafafa;
-  --tab-border: transparent;
-  --bottombar-bg: #eaeaeb;
-  --bottombar-border: transparent;
-  --button-bg: #434c5e;
-  --button-text: #d8dee9;
-  --bottombar-hover-bg: #dbdbdc;
-  --scrollbar-track-bg: #fafafa;
-  --scrollbar-thumb-bg: #a4a8b0;
-  --article-bg: #363f50;
-  --border-color: #e0e0e0;
+/* GitHub Dark */
+[data-theme='github-dark'] {
+  --main-bg: #24292e;
+  --bg-text: rgba(56, 58, 61, 0.35);
+  --text-color: #efefef;
+  --accent-color: #f9826c;
+  --element-color: #f9826c;
+  --titlebar-bg: #1f2428;
+  --titlebar-text: #fff;
+  --sidebar-bg: #24292e;
+  --sidebar-hover-bg: #1f2428;
+  --icon-bg: rgb(106, 115, 125);
+  --icon-hover-bg: rgb(106, 115, 125);
+  --icon-clicked-bg: rgb(225, 228, 232);
+  --explorer-bg: #1f2428;
+  --explorer-hover-bg: #24292e;
+  --explorer-border: #161a1d;
+  --tabs-bg: #1f2428;
+  --tab-bg: #1f2428;
+  --tab-active-bg: #24292e;
+  --tab-border: #24292e;
+  --bottombar-bg: #24292e;
+  --bottombar-border: #1b1f23;
+  --button-bg: #176f2c;
+  --button-text: #dcffe4;
+  --bottombar-hover-bg: #4f4f52;
+  --scrollbar-track-bg: #24292e;
+  --scrollbar-thumb-bg: #333536;
+  --article-bg: #1f2428;
+  --border-color: #1e1f29;
 }

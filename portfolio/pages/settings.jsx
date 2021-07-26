@@ -7,10 +7,10 @@ const SettingsPage = () => {
       <h2>Manage Themes</h2>
       <div className={styles.container}>
         <ThemeInfo
-          name="GitHub Dark"
-          icon="/github-dark.png"
-          publisher="GitHub"
-          theme="github-dark"
+          name="Atom-One-Light"
+          icon="/atom.png"
+          publisher="ATOM"
+          theme="atom-one-light"
           description="GitHub theme for VS Code"
         />
         <ThemeInfo
@@ -42,11 +42,11 @@ const SettingsPage = () => {
           description="An arctic, north-bluish clean and elegant Visual Studio Code theme."
         />
         <ThemeInfo
-          name="Atom One Light"
-          icon="/atom.png"
-          publisher="ATOM"
-          theme="atom-one-light"
-          description="An arctic, north-bluish clean and elegant Visual Studio Code theme."
+          name="Github Dark"
+          icon="/github-dark.png"
+          publisher="GitHub"
+          theme="github-dark"
+          description="GitHub theme for VS Code"
         />
       </div>
     </>
