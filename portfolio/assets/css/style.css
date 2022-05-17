@@ -402,12 +402,13 @@ to{border-right-color: transparent;}
 # Sections General
 --------------------------------------------------------------*/
 .section {
-  /* overflow: hidden; */
+  overflow: hidden;
   position: relative;
   width: 100%; 
-  top: 140px;
-  bottom: 100%;
-  opacity: 0;
+  top: 100px;
+  bottom: auto;
+  padding-bottom: 45px;
+  opacity: 1;
   transition: ease-in-out 0.4s;
   z-index: 2;
 }
