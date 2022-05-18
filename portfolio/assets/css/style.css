@@ -14,6 +14,7 @@ body {
   color: #fff;
   position: relative;
   background: transparent;
+  scroll-behavior: smooth;
 }
 
 body::before {
@@ -245,7 +246,7 @@ to{border-right-color: transparent;}
 /* Header Top */
 #header.header-top {
   height: 80px;
-  position: fixed;
+  position: sticky;
   left: 0;
   top: 0;
   right: 0;
@@ -403,10 +404,11 @@ to{border-right-color: transparent;}
 --------------------------------------------------------------*/
 section {
   overflow: hidden;
-  position: absolute;
+  position: relative;
   width: 100%; 
-  top: 140px;
-  bottom: 100%;
+  top: 100px;
+  bottom: auto;
+  padding-bottom: 45px;
   opacity: 0;
   transition: ease-in-out 0.4s;
   z-index: 2;
@@ -415,10 +417,12 @@ section.section-show {
   top: 100px;
   bottom: auto;
   opacity: 1;
-  padding-bottom: 45px;
+  padding-bottom: 50px;
 }
 section .container {
   background: rgba(255, 255, 255, 0.1);
+  margin-top: 50px;
+  margin-bottom: 50px;
   padding: 30px;
 }
 @media (max-width: 768px) {

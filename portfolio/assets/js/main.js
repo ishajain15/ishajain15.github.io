@@ -4,6 +4,7 @@
 * Author: BootstrapMade.com
 * License: https://bootstrapmade.com/license/
 */
+
 (function() {
   "use strict";
 
@@ -35,14 +36,69 @@
   }
 
   /**
+   * Easy on scroll event listener 
+   */
+  const onscroll = (el, listener) => {
+    el.addEventListener('scroll', listener)
+  }
+
+  /**
+   * Navbar links active state on scroll
+   */
+  let navbarlinks = select('#navbar .scrollto', true)
+  let sections = select('section', true)
+  const navbarlinksActive = () => {
+    let position = window.scrollY + 200
+    navbarlinks.forEach(navbarlink => {
+      if (!navbarlink.hash) return
+      let section = select(navbarlink.hash)
+      if (!section) return
+      if (position >= section.offsetTop && position <= (section.offsetTop + section.offsetHeight)) {
+        navbarlink.classList.add('active')
+        setTimeout(function() {
+          section.classList.add('section-show')
+        }, 150);
+      } else {
+        navbarlink.classList.remove('active')
+      }
+    })
+  }
+  window.addEventListener('load', navbarlinksActive)
+  onscroll(document, navbarlinksActive)
+
+  /**
    * Scrolls to an element with header offset
    */
   const scrollto = (el) => {
+    let header = select('#header')
+    let offset = header.offsetHeight
+
+    if (!header.classList.contains('header-top')) {
+      offset -= 160
+    }
+
+    let elementPos = select(el).offsetTop
     window.scrollTo({
-      top: 0,
+      top: elementPos - offset,
       behavior: 'smooth'
     })
   }
+
+  /**
+   * Toggle .header-scrolled class to #header when page is scrolled
+   */
+   let selectHeader = select('#header')
+   if (selectHeader) {
+     const headerScrolled = () => {
+       if (window.scrollY >= 100) {
+         selectHeader.classList.add('header-top')
+       } else {
+         selectHeader.classList.remove('header-top')
+       }
+     }
+     window.addEventListener('load', headerScrolled)
+     onscroll(document, headerScrolled)
+   }
 
   /**
    * Mobile nav toggle
@@ -56,22 +112,18 @@
   /**
    * Scrool with ofset on links with a class name .scrollto
    */
-  on('click', '#navbar .nav-link', function(e) {
-    let section = select(this.hash)
-    if (section) {
+   on('click', '.scrollto', function(e) {
+    if (select(this.hash)) {
       e.preventDefault()
 
-      let navbar = select('#navbar')
-      let header = select('#header')
-      let sections = select('section', true)
-      let navlinks = select('#navbar .nav-link', true)
-
+      let navlinks = select("#navbar .nav-link", true)
       navlinks.forEach((item) => {
         item.classList.remove('active')
       })
 
       this.classList.add('active')
 
+      let navbar = select('#navbar')
       if (navbar.classList.contains('navbar-mobile')) {
         navbar.classList.remove('navbar-mobile')
         let navbarToggle = select('.mobile-nav-toggle')
@@ -81,61 +133,15 @@
 
       if (this.hash == '#header') {
         header.classList.remove('header-top')
-        sections.forEach((item) => {
-          item.classList.remove('section-show')
-        })
-        return;
       }
 
-      if (!header.classList.contains('header-top')) {
+      else if (!header.classList.contains('header-top')) {
         header.classList.add('header-top')
-        setTimeout(function() {
-          sections.forEach((item) => {
-            item.classList.remove('section-show')
-          })
-          section.classList.add('section-show')
-
-        }, 350);
-      } else {
-        sections.forEach((item) => {
-          item.classList.remove('section-show')
-        })
-        section.classList.add('section-show')
       }
 
       scrollto(this.hash)
     }
   }, true)
-
-  /**
-   * Activate/show sections on load with hash links
-   */
-  window.addEventListener('load', () => {
-    if (window.location.hash) {
-      let initial_nav = select(window.location.hash)
-
-      if (initial_nav) {
-        let header = select('#header')
-        let navlinks = select('#navbar .nav-link', true)
-
-        header.classList.add('header-top')
-
-        navlinks.forEach((item) => {
-          if (item.getAttribute('href') == window.location.hash) {
-            item.classList.add('active')
-          } else {
-            item.classList.remove('active')
-          }
-        })
-
-        setTimeout(function() {
-          initial_nav.classList.add('section-show')
-        }, 350);
-
-        scrollto(window.location.hash)
-      }
-    }
-  });
 
   /**
    * Skills animation
