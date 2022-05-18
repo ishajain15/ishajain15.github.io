@@ -46,7 +46,6 @@
    * Navbar links active state on scroll
    */
   let navbarlinks = select('#navbar .scrollto', true)
-  let sections = select('section', true)
   const navbarlinksActive = () => {
     let position = window.scrollY + 200
     navbarlinks.forEach(navbarlink => {
@@ -115,6 +114,7 @@
    on('click', '.scrollto', function(e) {
     if (select(this.hash)) {
       e.preventDefault()
+      let section = select(this.hash)
 
       let navlinks = select("#navbar .nav-link", true)
       navlinks.forEach((item) => {
@@ -137,6 +137,9 @@
 
       else if (!header.classList.contains('header-top')) {
         header.classList.add('header-top')
+        setTimeout(function() {
+          section.classList.add('section-show')
+        }, 150);
       }
 
       scrollto(this.hash)
