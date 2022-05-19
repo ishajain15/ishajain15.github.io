@@ -72,6 +72,9 @@
     let header = select('#header')
     let offset = header.offsetHeight
 
+    if (el == '#about') offset -= 120
+    
+
     if (!header.classList.contains('header-top')) {
       offset -= 160
     }
@@ -93,6 +96,10 @@
          selectHeader.classList.add('header-top')
        } else {
          selectHeader.classList.remove('header-top')
+         let sections = select('section', true)
+         sections.forEach((item) => {
+          item.classList.remove('section-show')
+        })
        }
      }
      window.addEventListener('load', headerScrolled)
@@ -133,6 +140,10 @@
 
       if (this.hash == '#header') {
         header.classList.remove('header-top')
+        let sections = select('section', true)
+        sections.forEach((item) => {
+          item.classList.remove('section-show')
+        })
       }
 
       else if (!header.classList.contains('header-top')) {
