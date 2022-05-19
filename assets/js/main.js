@@ -109,11 +109,11 @@
   /**
    * Mobile nav toggle
    */
-  on('click', '.mobile-nav-toggle', function(e) {
-    select('#navbar').classList.toggle('navbar-mobile')
-    this.classList.toggle('bi-list')
-    this.classList.toggle('bi-x')
-  })
+  // on('click', '.mobile-nav-toggle', function(e) {
+  //   select('#navbar').classList.toggle('navbar-mobile')
+  //   this.classList.toggle('bi-list')
+  //   this.classList.toggle('bi-x')
+  // })
 
   /**
    * Scrool with ofset on links with a class name .scrollto
@@ -131,12 +131,12 @@
       this.classList.add('active')
 
       let navbar = select('#navbar')
-      if (navbar.classList.contains('navbar-mobile')) {
-        navbar.classList.remove('navbar-mobile')
-        let navbarToggle = select('.mobile-nav-toggle')
-        navbarToggle.classList.toggle('bi-list')
-        navbarToggle.classList.toggle('bi-x')
-      }
+      // if (navbar.classList.contains('navbar-mobile')) {
+      //   navbar.classList.remove('navbar-mobile')
+      //   let navbarToggle = select('.mobile-nav-toggle')
+      //   navbarToggle.classList.toggle('bi-list')
+      //   navbarToggle.classList.toggle('bi-x')
+      // }
 
       if (this.hash == '#header') {
         header.classList.remove('header-top')
