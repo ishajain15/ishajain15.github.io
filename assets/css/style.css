@@ -246,7 +246,7 @@ to{border-right-color: transparent;}
     font-size: 36px;
   }
   #header h2 {
-    font-size: 20px;
+    font-size: 15px;
     line-height: 30px;
   }
   #header .social-links {
@@ -261,7 +261,7 @@ to{border-right-color: transparent;}
 
 /* Header Top */
 #header.header-top {
-  height: 80px;
+  height: 60px;
   position: sticky;
   left: 0;
   top: 0;
@@ -271,7 +271,7 @@ to{border-right-color: transparent;}
   -webkit-backdrop-filter: blur(5px);
 }
 
-#header.header-top .social-links, #header.header-top h2 {
+#header.header-top .social-links, #header.header-top h2, #header.header-top .scroll-down-arrow {
   display: none;
 }
 #header.header-top h1 {
@@ -370,15 +370,6 @@ to{border-right-color: transparent;}
   transition: 0.5s;
 }
 
-@media (max-width: 991px) {
-  .mobile-nav-toggle {
-    display: block;
-  }
-
-  .navbar ul {
-    display: none;
-  }
-}
 .navbar-mobile {
   position: fixed;
   overflow: hidden;
@@ -418,6 +409,20 @@ to{border-right-color: transparent;}
   font-size: 16px;
   position: relative;
 } */
+
+@media (max-width: 991px) {
+  /* .mobile-nav-toggle {
+    display: block;
+  }
+
+  .navbar ul {
+    display: none;
+  } */
+
+  #header.header-top {
+    height: 40px;
+  }
+}
 
 /*--------------------------------------------------------------
 # Sections General
