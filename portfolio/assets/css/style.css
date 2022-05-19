@@ -137,6 +137,22 @@ h1, h3, h4, h5, h6 {
   font-family: 'Spectral SC', serif;
 }
 
+h7 {
+  font-family: 'Alegreya Sans SC', sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.scroll-down-arrow {
+  padding-top: 150px;
+  text-align: center;
+}
+
+.scroll-down-arrow i {
+  color: rgba(255, 255, 255, 0.8);
+}
+
 h2 {
   font-family: 'Spectral', serif;
 }
@@ -167,7 +183,7 @@ to{border-right-color: transparent;}
 # Header
 --------------------------------------------------------------*/
 #header {
-  transition: ease-in-out 0.3s;
+  transition: ease-in-out 0.5s;
   position: relative;
   height: 100vh;
   display: flex;
@@ -176,7 +192,7 @@ to{border-right-color: transparent;}
   overflow-y: auto;
 }
 #header * {
-  transition: ease-in-out 0.3s;
+  transition: ease-in-out 0.5s;
 }
 #header h1 {
   font-size: 48px;
@@ -215,7 +231,7 @@ to{border-right-color: transparent;}
   justify-content: center;
   align-items: center;
   background: rgba(255, 255, 255, 0.1);
-  color: #fff;
+  color: rgba(255, 255, 255, 0.8);
   line-height: 1;
   margin-right: 8px;
   border-radius: 50%;
@@ -251,6 +267,8 @@ to{border-right-color: transparent;}
   top: 0;
   right: 0;
   background: rgba(255, 255, 255, 0.1);
+  -webkit-backdrop-filter: blur(5px);
+  backdrop-filter: blur(5px);
 }
 #header.header-top .social-links, #header.header-top h2 {
   display: none;
@@ -442,7 +460,7 @@ section .container {
   margin: 0 0 20px 0;
   letter-spacing: 2px;
   /* text-transform: uppercase; */
-  color: #aaaaaa;
+  color: rgba(255, 255, 255, 0.8);
   font-family: 'Alegreya Sans SC', sans-serif;
 }
 .section-title h2::after {
@@ -450,7 +468,7 @@ section .container {
   width: 120px;
   height: 1px;
   display: inline-block;
-  background: #4ceb95;
+  background: rgba(99, 180, 255, 0.8);
   margin: 4px 10px;
 }
 .section-title p {

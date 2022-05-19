@@ -56,7 +56,7 @@
         navbarlink.classList.add('active')
         setTimeout(function() {
           section.classList.add('section-show')
-        }, 150);
+        }, 100);
       } else {
         navbarlink.classList.remove('active')
       }
